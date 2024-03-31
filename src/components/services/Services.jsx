@@ -35,16 +35,22 @@ const Services = () => {
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
+<<<<<<< Updated upstream
         <p>
           I focus on helping your brand grow
           <br /> and move forward
         </p>
         <hr />
+=======
+        <p>Get to know us</p>
+        <hr/>
+>>>>>>> Stashed changes
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
+<<<<<<< Updated upstream
             <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
           </h1>
         </div>
@@ -53,6 +59,16 @@ const Services = () => {
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
           <button>WHAT WE DO?</button>
+=======
+            <motion.b whileHover={{color:"orange"}}>Roadmap</motion.b>
+            </h1>
+        </div>
+        <div className="title">
+          <h1>
+            <motion.b whileHover={{color:"orange"}}>Buy</motion.b> Now
+            </h1>
+            <button>Roadmap</button>
+>>>>>>> Stashed changes
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>

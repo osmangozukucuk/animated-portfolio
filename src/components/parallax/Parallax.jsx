@@ -19,6 +19,7 @@ const Parallax = ({ type }) => {
       ref={ref}
       style={{
         background:
+<<<<<<< Updated upstream
           type === "services"
             ? "linear-gradient(180deg, #111132, #0c0c1d)"
             : "linear-gradient(180deg, #111132, #505064)",
@@ -39,6 +40,23 @@ const Parallax = ({ type }) => {
       ></motion.div>
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </div>
+=======
+        type==="services" 
+    ? "linear-gradient(180deg, #111132, #0c0c1d)"
+    : "linear-gradient(180deg, #111132, #505064)",
+    }}>
+
+
+        <motion.h1 style={{y: yText }}>
+            {type==="services" ? "Roadmap" : "How to buy $PWIF"}
+        </motion.h1>
+        <motion.div className="mountains"></motion.div>
+        <motion.div className="planets" style={{ y:yBg,
+            backgroundImage: `url(${type==="services" ? "/planets.png" : "/sun.png"})`
+    }}></motion.div>
+        <motion.div style={{x:yBg}} className="stars"></motion.div>
+        </div>
+>>>>>>> Stashed changes
   );
 };
 
