@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const StarsBackground = () => {
   const canvasRef = useRef(null);
@@ -7,7 +7,7 @@ const StarsBackground = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -18,23 +18,23 @@ const StarsBackground = () => {
         y: Math.random() * canvas.height,
         radius: Math.random() * 1 + 1,
         vx: Math.floor(Math.random() * 50) - 25,
-        vy: Math.floor(Math.random() * 50) - 25
+        vy: Math.floor(Math.random() * 50) - 25,
       });
     }
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalCompositeOperation = "lighter";
 
       for (let i = 0; i < stars.current.length; i++) {
         const s = stars.current[i];
 
-        ctx.fillStyle = '#fff';
+        ctx.fillStyle = "#fff";
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
         ctx.fill();
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = "black";
         ctx.stroke();
       }
 
@@ -42,7 +42,8 @@ const StarsBackground = () => {
       for (let i = 0; i < stars.current.length; i++) {
         const starI = stars.current[i];
         ctx.moveTo(starI.x, starI.y);
-        if (distance(mouse.current, starI) < 150) ctx.lineTo(mouse.current.x, mouse.current.y);
+        if (distance(mouse.current, starI) < 150)
+          ctx.lineTo(mouse.current.x, mouse.current.y);
         for (let j = 0; j < stars.current.length; j++) {
           const starII = stars.current[j];
           if (distance(starI, starII) < 150) {
@@ -51,7 +52,7 @@ const StarsBackground = () => {
         }
       }
       ctx.lineWidth = 0.05;
-      ctx.strokeStyle = 'white';
+      ctx.strokeStyle = "white";
       ctx.stroke();
     };
 
@@ -84,7 +85,7 @@ const StarsBackground = () => {
       mouse.current = { x: e.clientX, y: e.clientY };
     };
 
-    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener("mousemove", handleMouseMove);
 
     const tick = () => {
       draw();
@@ -95,11 +96,16 @@ const StarsBackground = () => {
     tick();
 
     return () => {
-      canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
+    />
+  );
 };
 
 export default StarsBackground;
