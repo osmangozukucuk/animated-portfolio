@@ -47,24 +47,6 @@ const Contact = () => {
   };
 
   return (
-<<<<<<< Updated upstream
-    <motion.div
-      ref={ref}
-      className="contact"
-      variants={variants}
-      initial="initial"
-      whileInView="animate"
-    >
-      <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>hello@react.dev</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>Hello street New York</span>
-=======
     <motion.div className="contact" variants={variants} initial="initial" whileInView="animate">
         <motion.div className="textContainer" variants={variants}>
         <motion.h1>Ayush</motion.h1>
@@ -75,7 +57,6 @@ const Contact = () => {
         <motion.div  variants={variants}>
             <h2>Alok</h2>
             <span>Ankara</span>
->>>>>>> Stashed changes
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
