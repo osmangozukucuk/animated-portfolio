@@ -31,8 +31,8 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
-      duration: 20,
+      repeatType: "mirror",
+      duration: 10,
     },
   },
 };
@@ -47,34 +47,26 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Web developer and UI designer
-          </motion.h1>
+          <motion.h1 variants={textVariants}>$PWIF</motion.h1>
+          <motion.h2 variants={textVariants}>Platypus wif a hat</motion.h2>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
+            <motion.button variants={textVariants}>Buy Now!</motion.button>
+            <motion.button className="scroll" variants={textVariants}>
+              Join our Discord!
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
-          <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
-          />
         </motion.div>
-      </div>
-      <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Writer Content Creator Influencer
-      </motion.div>
-      <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <motion.div
+          className="slidingTextContainer"
+          variants={sliderVariants}
+          initial="initial"
+          animate="animate"
+        >
+          $PWIF
+        </motion.div>
+        <div className="imageContainer">
+          <img src="/Hero.gif" className="photo" alt="" />
+        </div>
       </div>
     </div>
   );
